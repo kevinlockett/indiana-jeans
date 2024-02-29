@@ -1,0 +1,84 @@
+@import url("reset.css");
+
+body {
+    font-family: "fira-sans", sans-serif;
+    line-height: 1.6;
+    place-items: center;
+}
+
+.wrapper {
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    width: 80%;
+    margin: 10svh;
+    max-width: 1000px;
+}
+
+h1 {
+    padding: 2svh 2svh 1svh 2svh;
+    font-size: 2rem;
+    color: #2243b6;
+    text-shadow: #020c31 -1px 2px 3px;
+}
+
+h2 {
+    padding-bottom: 1.5svh;
+    font-size: 1.5rem;
+}
+
+.survey {
+    padding: 0 0 2svh 5svh;
+}
+
+.radio-buttons {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 12px;
+    font-size: 22px;
+    user-select: none;
+}
+
+.radio-buttons input {
+    position: absolute;
+    opacity: 0;
+    height: 0;
+    width: 0;
+}
+
+.checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    background-color: #cbe0f0 ;
+    border-radius: 50%;
+}
+
+.radio-buttons:hover input ~ .checkmark {
+    background-color: #79baec;
+}
+
+.radio-buttons input:checked ~ .checkmark {
+    background-color: #2243b6;
+}
+
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+.radio-buttons input:checked ~ .checkmark:after {
+    display: block;
+}
+
+.radio-buttons .checkmark:after {
+    top: 9px;
+    left: 9px;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #cbe0f0;
+}
+

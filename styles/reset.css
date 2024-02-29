@@ -1,0 +1,163 @@
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+/* Inherit fonts and remove default margin and padding */
+* {
+	margin: 0;
+	padding: 0;
+	font: inherit;
+}
+
+/* Prevent font size inflation & fix appearance */
+html {
+	-moz-text-size-adjust: none;
+	-webkit-text-size-adjust: none;
+	text-size-adjust: none;
+	/* Avoid punctuation from creating gap when first or last in a paragraph -- currently only works in Safari */
+	hanging-punctuation: first last;
+	/* set default dark mode */
+	color-scheme: dark light;
+}
+
+/* Set core body defaults */
+body {
+	min-height: 100svh;
+	line-height: 1.5;
+}
+
+/* Remove default margin in favour of better control in authored CSS */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+	margin-block-end: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role and most other lists, which suggests default styling will be removed */
+ul[role="list"],
+ol[role="list"],
+menu:not(article menu),
+ol:not(article ol),
+ul:not(article ul) {
+	list-style: none;
+}
+
+article ol,
+article ul {
+	list-style-position: inside;
+}
+
+/* Set shorter line heights on headings and interactive elements */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+button,
+input,
+label {
+	line-height: 1.1;
+}
+
+/* Balance text wrapping on headings */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	text-wrap: balance;
+}
+
+/* Balance text wrapping for smaller text */
+p {
+	/* Max-width for text row -- 75 characters is comfortable, but this can be adjusted */
+	max-width: 75ch;
+	/* Prevent 'orphans' in word wrap */
+	text-wrap: pretty;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+	text-decoration-skip-ink: auto;
+	color: currentColor;
+}
+
+/* Enhance link underlines */
+a {
+	/* Places underlines below the descenders */
+	text-underline-position: under;
+
+	/* Sets the thickness as a percentage of the font size */
+	text-decoration-thickness: 8;
+}
+
+/* Make images easier to work with */
+img,
+picture,
+svg,
+video {
+	/* Italic font to display alt text when image does not load */
+	font-style: italic;
+
+	/* HANDLE SLOW LOADING IMG */
+	/* 1. Use <link rel=preload as=image href=' ... give url here ... ' fetchpriority=high> */
+	/* 2. Load low res img as well as high res image like this:
+	      <img src='...high res img url...> style="background-image: url(...low res img url...) alt='...' width='...' height='...'>
+           Be sure to use width & height (not px -- just ratio like 400 & 900) ...  */
+	background-repeat: no-repeat;
+	background-size: cover;
+
+	/* Add shape margin for when floating an image over/around text --see 'shape-outside' */
+	shape-margin: 1rem;
+
+	max-width: 100%;
+	height: auto;
+	/* display: block */
+	vertical-align: middle;
+}
+
+/* Make sure textareas without a rows attribute are not tiny */
+textarea:not([rows]) {
+	min-height: 10em;
+}
+
+/* Anything that has been anchored to should have extra scroll margin */
+:target {
+	scroll-margin-block: 5ex;
+}
+
+/* Enable smooth scrolling */
+@media (prefers-reduced-motion: no-preference) {
+	:has(:target) {
+		scroll-behavior: smooth;
+		scroll-padding-top: 3rem;
+	}
+}
+
+/* Remove focus outline for mouse users, but leave it on for keyboard */
+:focus:not(:focus-visible) {
+	outline: none;
+}
+
+/* Provide interactive elements with a cursor */
+label,
+button,
+select,
+summary,
+[type="radio"],
+[type="submit"],
+[type="checkbox"] {
+	cursor: pointer;
+}

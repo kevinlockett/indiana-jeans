@@ -1,84 +1,91 @@
 @import url("reset.css");
-
-body {
-    font-family: "fira-sans", sans-serif;
-    line-height: 1.6;
-    place-items: center;
-}
-
-.wrapper {
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
-    width: 80%;
-    margin: 10svh;
-    max-width: 1000px;
-}
+@import url("buttons.css");
+@import url("radio_buttons.css");
 
 h1 {
-    padding: 2svh 2svh 1svh 2svh;
+    padding: 2rem 2rem 1rem 2rem;
     font-size: 2rem;
     color: #2243b6;
     text-shadow: #020c31 -1px 2px 3px;
 }
 
 h2 {
-    padding-bottom: 1.5svh;
+    padding-bottom: 1.5rem;
     font-size: 1.5rem;
 }
 
+.wrapper {
+    min-height: 100vh;
+    display: grid;
+    gap: 2rem;
+    place-items: center;
+    place-content: center;
+    padding: 1rem;
+}
+
 .survey {
-    padding: 0 0 2svh 5svh;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    width: 80%;
+    margin: 0 auto;
+    max-width: 800px;
 }
 
-.radio-buttons {
-    display: block;
-    position: relative;
-    padding-left: 35px;
-    margin-bottom: 12px;
-    font-size: 22px;
-    user-select: none;
+.survey__title {
+    text-align: center;
+    margin: 1rem 0;
 }
 
-.radio-buttons input {
-    position: absolute;
-    opacity: 0;
-    height: 0;
-    width: 0;
+.survey__question {
+    padding: 0 0 2rem 5rem;
 }
 
-.checkmark {
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 25px;
-    width: 25px;
-    background-color: #cbe0f0 ;
-    border-radius: 50%;
+.survey__submit {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 2rem;
 }
 
-.radio-buttons:hover input ~ .checkmark {
-    background-color: #79baec;
+.submissions__container {
+    max-width: 80%;
+    margin: 0 auto 2rem;
+    font-size: .75rem;
 }
 
-.radio-buttons input:checked ~ .checkmark {
-    background-color: #2243b6;
+.submission {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: rgb(221, 224, 228);
+    margin-bottom: .5rem;
+    padding: 0 1.25rem;
+    border: #2243b6 solid 1px;
 }
 
-.checkmark:after {
-    content: "";
-    position: absolute;
-    display: none;
+.submission__response {
+    padding-top: .25rem;
+    padding-bottom: .25rem;
+    margin: 0 .333rem;
 }
 
-.radio-buttons input:checked ~ .checkmark:after {
-    display: block;
+.question {
+    margin-right: .2rem;
 }
 
-.radio-buttons .checkmark:after {
-    top: 9px;
-    left: 9px;
-    width: 8px;
-    height: 8px;
-    border-radius: 50%;
-    background: #cbe0f0;
+.answer {
+    text-transform: uppercase;
 }
 
+.footer {
+    display: flex;
+    flex-wrap: wrap;
+    gap: .333rem;
+    place-items: center;
+    justify-content: center;
+    margin-bottom: 2rem;
+}
+
+.footer__details {
+    margin: 0 1rem;
+    color: #2243b6;
+}

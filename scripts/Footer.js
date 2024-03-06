@@ -1,9 +1,10 @@
 export const PageFooter = () => {
-    let footerHTML = "<footer class='footer'>"
-    footerHTML += "<span class='footer__copyright'>&copy; 2023 Acme, Inc</span>"
-    footerHTML += "<span class='footer__address'>8088 Interface Ave</span>"
-    footerHTML += "<span class='footer__map'>View us on Google Maps</span>"
-    footerHTML += "</footer>"
+    let footerHTML = `
+    <footer class='footer'>
+        <span class="footer__details footer__copyright">&copy; 2023 Acme, Inc</span>
+        <span class="footer__details footer__address">8088 Interface Ave</span>
+        <span class="footer__details footer__map">View us on Google Maps</span>
+    </footer>`
 
     return footerHTML
 }

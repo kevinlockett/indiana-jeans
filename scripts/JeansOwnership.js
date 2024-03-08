@@ -1,4 +1,4 @@
-import { setOwnsBlueJeans } from "./TransientState.js"
+import { setOwnsBlueJeans } from "./transientState.js"
 
 // Convert string 'true'/'false' to boolean with JSON.parse()
 

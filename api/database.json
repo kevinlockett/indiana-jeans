@@ -1,61 +1,4 @@
 {
-  "submissions": [
-    {
-      "id": 1,
-      "ownsBlueJeans": false,
-      "socioLocationId": 1
-    },
-    {
-      "id": "3daa",
-      "ownsBlueJeans": true,
-      "socioLocationId": 3
-    },
-    {
-      "id": "888d",
-      "ownsBlueJeans": false,
-      "socioLocationId": 1
-    },
-    {
-      "id": "bb46",
-      "ownsBlueJeans": true,
-      "socioLocationId": 4
-    },
-    {
-      "id": "8bc5",
-      "ownsBlueJeans": false,
-      "socioLocationId": 3
-    },
-    {
-      "id": "a9e3",
-      "ownsBlueJeans": false,
-      "socioLocationId": 4
-    },
-    {
-      "id": "b663",
-      "ownsBlueJeans": false,
-      "socioLocationId": 2
-    },
-    {
-      "id": "02ef",
-      "ownsBlueJeans": false,
-      "socioLocationId": 2
-    },
-    {
-      "id": "d2d6",
-      "ownsBlueJeans": false,
-      "socioLocationId": 2
-    },
-    {
-      "id": "fd16",
-      "ownsBlueJeans": true,
-      "socioLocationId": 1
-    },
-    {
-      "id": "d16c",
-      "ownsBlueJeans": false,
-      "socioLocationId": 1
-    }
-  ],
   "socioLocations": [
     {
       "id": 1,
@@ -72,6 +15,33 @@
     {
       "id": 4,
       "label": "Rural"
+    }
+  ],
+  "submissions": [
+    {
+      "id": "66ed",
+      "ownsBlueJeans": true,
+      "socioLocationId": 1
+    },
+    {
+      "id": "f93e",
+      "ownsBlueJeans": false,
+      "socioLocationId": 0
+    },
+    {
+      "id": "3ae0",
+      "ownsBlueJeans": true,
+      "socioLocationId": 1
+    },
+    {
+      "id": "926e",
+      "ownsBlueJeans": true,
+      "socioLocationId": 1
+    },
+    {
+      "id": "fa81",
+      "ownsBlueJeans": false,
+      "socioLocationId": 4
     }
   ]
 }

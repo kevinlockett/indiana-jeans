@@ -1,4 +1,4 @@
-import { saveSurveySubmission } from "./TransientState.js"
+import { saveSurveySubmission } from "./transientState.js"
 
 const handleSurveySubmission = (clickEvent) => {
     if (clickEvent.target.id === "submitSurvey") {

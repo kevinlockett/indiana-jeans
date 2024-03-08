@@ -1,4 +1,4 @@
-import { setSocioLocationId } from "./TransientState.js"
+import { setSocioLocationId } from "./transientState.js"
 
 const handleLocationChange = (changeEvent) => {
     if (changeEvent.target.name === "location") {
@@ -21,11 +21,11 @@ export const DemographicsChoices = async () => {
         (location) => {
             return `
             <label class='radio-buttons'>${location.label}
-            <input type='radio' name='location' value='${location.id}'>
-            <span class='checkmark'></span>
+                <input type='radio' name='location' value='${location.id}'>
+                <span class='checkmark'></span>
             </label>`
         }
-        )
+    )
         
     locationsHTML += locationStringArr.join("")
     
